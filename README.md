@@ -11,36 +11,35 @@ markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-$T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
+$T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$  
 
-Let's begin by subbing in our two F(n) expressions to the formal definition of $O$:
+Let's begin by subbing in our two F(n) expressions to the formal definition of $O$:  
 
 $T(n) \in O(log_5(n)) \iff \exists c, n_0: T(n) \leq c \cdot (log_5(n)) \forall n \geq n_0$  
-                                        &
-$T(n) \in O(log_3(n)) \iff \exists c, n_0: T(n) \leq c \cdot (log_3(n)) \forall n \geq n_0$
+                                        &  
+$T(n) \in O(log_3(n)) \iff \exists c, n_0: T(n) \leq c \cdot (log_3(n)) \forall n \geq n_0$  
 
-Utilizing the change of base formula for logs, we get the following:
+Utilizing the change of base formula for logs, we get the following:  
 
 $T(n) \in O(log_3(n)) \iff \exists c, n_0: T(n) \leq c/(log_5(3)) * log_5(n) \forall n \geq n_0$  
-                                        &
-$T(n) \in O(log_3(n)) \iff \exists c, n_0: T(n) \leq d * log_5(n) \forall n \geq n_0$
+                                        &  
+$T(n) \in O(log_3(n)) \iff \exists c, n_0: T(n) \leq d * log_5(n) \forall n \geq n_0$  
 
-Where d represents any arbitrary constant.
+Where d represents any arbitrary constant.  
 
-We see something similar shake out for our $log_5$ expressions as well:
+We see something similar shake out for our $log_5$ expressions as well:  
 
-$T(n) \in O(log_5(n)) \iff \exists c, n_0: T(n) \leq c/(log_3(5)) * log_3(n) \forall n \geq n_0$
-                                        &
-$T(n) \in O(log_5(n)) \iff \exists c, n_0: T(n) \leq d * log_3(n) \forall n \geq n_0$
+$T(n) \in O(log_5(n)) \iff \exists c, n_0: T(n) \leq c/(log_3(5)) * log_3(n) \forall n \geq n_0$  
+                                        &  
+$T(n) \in O(log_5(n)) \iff \exists c, n_0: T(n) \leq d * log_3(n) \forall n \geq n_0$  
 
-Where d represents any arbitrary constant.
+Where d represents any arbitrary constant.  
 
-Through this, we have effectively shown that $T(n) \in O(log_5(n))$ and T(n) \in O(log_3(n)). Expressed symbolically:
+Through this, we have effectively shown that $T(n) \in O(log_5(n))$ and T(n) \in O(log_3(n)). Expressed symbolically:  
 
 $\forall T(n) \in O(log_3(n))$  
 $T(n) \in O(log_5(n))  
-______________________________  
+________________________    
 
-$\forall T(n) \in O(log_5(n))$  
-$T(n) \in O(log_3(n))$
-
+$\forall T(n) \in O(log_5(n))$   
+$T(n) \in O(log_3(n))$  
